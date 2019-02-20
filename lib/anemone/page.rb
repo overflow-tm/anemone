@@ -63,7 +63,7 @@ module Anemone
         u = a['href']
         next if u.nil? or u.empty?
         abs = to_absolute(u) rescue next
-        @links << abs if in_domain?(abs)
+        @links << abs
       end
       @links.uniq!
       @links
